@@ -1,0 +1,5 @@
+test_id,title,author,date_submitted,days_since_last_activity,past_submission_attempts,status,risk
+12,SF Bay Area Test Flight,7,3/12/2019,10,0,Pending 1st Manager Approval,severe
+7474890889,Crash Safety Test,4,3/20/2019,2,0,Pending CEO Approval,severe
+3847792993,Battery Duration Stress Test,4,2/22/2019,28,0,Fully Approved - In Progress,high
+2080844423,Extreme Cold Flight,6,1/21/2019,60,1,Upper Management Approved,moderate

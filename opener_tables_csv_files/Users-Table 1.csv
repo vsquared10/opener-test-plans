@@ -1,0 +1,9 @@
+user_id,first_name,last_name,position,manager_level,email
+1,Victor,Vulovic,Developer,,victorvulovic@gmail.com
+2,Marcus,Leng,Founder & CEO,CEO,mleng@opener.com
+3,Jessica,Alba,Flight Test Manager,Upper,jsmith@opener.com
+4,Jerry,Seinfeld,Flight Test Manager,Upper,jseinfeld@opener.com
+5,Steve,Kerr,Associate Flight Test Manager,Lower,skerr@opener.com
+6,Grey,Flint,Associate Flight Test Manager,Lower,gflint@opener.com
+7,Francis,Macklemore,Associate Flight Test Manager,Lower,fmacklemore@opener.com
+8,Lucia,Gallardo,Lead Engineer,Contributor,lgallardo@opener.com

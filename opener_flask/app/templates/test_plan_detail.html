@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-2">
+        <img src="{{url_for('.static', filename='images/wink.png')}}"></img>
+        <p>{{ author }}</>
+      </div>
+      <div class="col-6">
+        <h1>{{ test_plan.title }}</h1>
+        <div>
+          <span>{{test_plan.risk[0]|upper}}{{test_plan.risk[1:]}} Risk</span>
+          <hr>
+          <span>{{test_plan.status}}</span>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <h4>Supplemental Documents</h4>
+        <ul class="supp-docs-list">
+          {% for doc in supp_docs %}
+            <li>
+              <a href="{{url_for('.static', filename=doc.uri)}}" target="_blank">
+                {{doc.title}}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 supp-doc-render">
+        <embed class="doc-embed" src="{{url_for('.static', filename=supp_docs[0].uri)}}" type="application/pdf">
+      </div>
+    </div>
+  </div>
+{% endblock %}

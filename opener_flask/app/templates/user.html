@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block app_content %}
+    <h1>Welcome, {{ current_user.first_name }}</h1>
+    <hr>
+    <span>Your phone number is currently {{ current_user.phone }}. You can edit it below.</span>
+    <h1 class="form-title">Edit Info</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+{% endblock %}

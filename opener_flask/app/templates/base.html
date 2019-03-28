@@ -1,0 +1,61 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='styles/main.css')}}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous">
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="{{url_for('.static', filename='src/main.js')}}"></script>
+{% endblock %}
+
+{% block title %}
+    {% if title %}
+      {{ title }} - Opener Test Plans
+    {% else %}
+      Welcome to the Opener Test Plans Web App
+    {% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('test_plans_list') }}">
+        <img src="{{ url_for('.static', filename='images/opener.png')}}"></img>
+      </a>
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="{{ url_for('test_plans_list') }}">Test Plans List <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+          {% if current_user.is_anonymous %}
+            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+          {% else %}
+            <a class="nav-link" href="{{ url_for('user', email=current_user.email) }}">Edit Profile</a>
+            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+          {% endif %}
+         </li>
+       </ul>
+       <span class="navbar-text">
+         Internal tool for managing workflows
+       </span>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,5 @@
+test_id,title,status,risk,url_test_detail
+12,SF Bay Area Test Flight,Pending 1st Manager Approval,severe,https://www.opener.com/test_plans_list/test_plans/0000000012
+7474890889,Crash Safety Test,Pending CEO Approval,severe,https://www.opener.com/test_plans_list/test_plans/7474890889
+3847792993,Battery Duration Stress Test,Fully Approved - In Progress,high,https://www.opener.com/test_plans_list/test_plans/3847792993
+2080844423,Extreme Cold Flight,Upper Management Approved,moderate,https://www.opener.com/test_plans_list/test_plans/2080844423

@@ -1,0 +1,65 @@
+body {
+  background: lightgrey;
+}
+
+.col-lg-2 img {
+  border: 1px solid black;
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.supp-doc-render {
+  height: 400px;
+}
+
+.doc-embed {
+  width: 300%;
+  height: 100%;
+}
+
+.container-fluid {
+  background-color: floralwhite;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.supp-docs-list {
+  border: 1px solid;
+  padding: 7px 0px 14px 35px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.form-title {
+  padding: 20px 0px 10px 0px;
+}
+
+.nav-link {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.navbar-dark {
+  background-color: #222627!important;
+}
+
+.navbar-brand {
+  width: 11%;
+}
+
+.navbar-brand img {
+  width: 85%;
+}
