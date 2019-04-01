@@ -29,7 +29,6 @@ def user(email):
     form = EditProfileForm()
     if form.validate_on_submit():
         current_user.phone = form.phone.data
-        current_user.set_password(form.password.data)
         db.session.commit()
         flash('Your changes have been saved.')
     return render_template('user.html', form=form)
